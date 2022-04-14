@@ -1,0 +1,21 @@
+{
+  "name": "6315_cpu_dep_on_node",
+  "version": "0.0.0",
+  "private": true,
+  "scripts": {
+    "serve": "esbuild index.ts --bundle --outfile=index.js --serve --servedir=."
+  },
+  "dependencies": {
+    "@tensorflow/tfjs-backend-cpu": "^3.15.0",
+    "@tensorflow/tfjs-backend-wasm": "^3.15.0",
+    "@tensorflow/tfjs-backend-webgl": "^3.15.0",
+    "@tensorflow/tfjs-converter": "^3.15.0",
+    "@tensorflow/tfjs-core": "3.15.0",
+    "@tensorflow/tfjs-data": "^3.15.0",
+    "@tensorflow/tfjs-layers": "^3.15.0",
+    "seedrandom": "~2.4.3"
+  },
+  "devDependencies": {
+    "esbuild": "^0.14.36"
+  }
+}
