@@ -3,7 +3,8 @@
   "version": "0.0.0",
   "private": true,
   "scripts": {
-    "serve": "esbuild index.ts --bundle --outfile=index.js --serve --servedir=."
+    "serve-esbuild": "esbuild index.ts --bundle --outfile=index.js --sourcemap --serve --servedir=.",
+    "serve-rollup": "rollup -c"
   },
   "dependencies": {
     "@tensorflow/tfjs-backend-cpu": "^3.15.0",
@@ -13,9 +14,18 @@
     "@tensorflow/tfjs-core": "3.15.0",
     "@tensorflow/tfjs-data": "^3.15.0",
     "@tensorflow/tfjs-layers": "^3.15.0",
-    "seedrandom": "~2.4.3"
+    "seedrandom": "~2.4.3",
+    "tslib": "^2.3.1"
   },
   "devDependencies": {
-    "esbuild": "^0.14.36"
+    "@rollup/plugin-commonjs": "^21.0.3",
+    "@rollup/plugin-node-resolve": "^13.2.0",
+    "@rollup/plugin-typescript": "^8.3.2",
+    "esbuild": "^0.14.36",
+    "rollup": "^2.70.1",
+    "rollup-plugin-import-css": "^3.0.3",
+    "rollup-plugin-serve": "^1.1.0",
+    "rollup-plugin-sourcemaps": "^0.6.3",
+    "typescript": "^4.6.3"
   }
 }
